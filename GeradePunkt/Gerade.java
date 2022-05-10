@@ -1,8 +1,10 @@
+package GeradePunkt;
+
 public class Gerade {
     private Punkt p1;
     private Punkt p2;
 
-    public Gerade(Punkt p1,Punkt p2){
+    public Gerade(Punkt p1, Punkt p2){
         this.p1= p1;
         this.p2= p2;
     }

@@ -1,3 +1,4 @@
+package GeradePunkt;
 
 public class Punkt {
     protected double x;
