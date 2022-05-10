@@ -8,7 +8,7 @@ import java.util.*;
 
 
 public class Classlist {
-    List<Student> students = new ArrayList();  // Was heißt der Hinweis hier? Raw use of parameterized class 'ArrayList'
+    List<Student> students = new ArrayList();
 
     public void addStudent(Student toAdd) {
         students.add(toAdd);
@@ -22,6 +22,22 @@ public class Classlist {
 
    public void sort() {
         Collections.sort(students);
+    }
+    public static void main(String[] args) {
+        Classlist c = new Classlist();
+        Student s1 = new Student("Max", "Mueller", 10);
+        Student s2 = new Student("Lara", "Klose", 30);
+
+        c.addStudent(s1);
+        c.addStudent(s2);
+
+        c.printStudents();
+
+        c.sort();
+        c.printStudents();
+
+
+
     }
 
 }
