@@ -14,6 +14,7 @@ public class Map {
         System.out.println(liste.get("lara"));
         System.out.println(liste.containsKey("Mattis"));
         System.out.println(liste.containsValue(1337));
+        liste.replace("Mattis",6633);
 
 
 

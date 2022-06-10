@@ -12,19 +12,26 @@ public class Wochentagtest {
             Random zufall  = new Random();
             int zufallszahl = zufall.nextInt(6);
             switch(zufallszahl){
-                case 0: aktuell.add(Wochentag.MONTAG);
+                case 0:
+                    aktuell.add(Wochentag.MONTAG);
                 break;
-                case 1: aktuell.add(Wochentag.DIENSTAG);
+                case 1:
+                    aktuell.add(Wochentag.DIENSTAG);
                     break;
-                case 2: aktuell.add(Wochentag.MITTWOCH);
+                case 2:
+                    aktuell.add(Wochentag.MITTWOCH);
                     break;
-                case 3: aktuell.add(Wochentag.DONNERSTAG);
+                case 3:
+                    aktuell.add(Wochentag.DONNERSTAG);
                     break;
-                case 4: aktuell.add(Wochentag.FREITAG);
+                case 4:
+                    aktuell.add(Wochentag.FREITAG);
                     break;
-                case 5: aktuell.add(Wochentag.SAMSTAG);
+                case 5:
+                    aktuell.add(Wochentag.SAMSTAG);
                     break;
-                case 6: aktuell.add(Wochentag.SONNTAG);
+                case 6:
+                    aktuell.add(Wochentag.SONNTAG);
                     break;
 
             }

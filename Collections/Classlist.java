@@ -28,6 +28,7 @@ public class Classlist {
         Student s1 = new Student("Max", "Mueller", 10);
         Student s2 = new Student("Lara", "Klose", 30);
 
+        System.out.println(s1);
         c.addStudent(s1);
         c.addStudent(s2);
 
