@@ -1,8 +1,8 @@
 package SUDOKU;
 
 public class Sudokusolver {
+    ;
     private static final int GRID_SIZE = 9;
-
     private static boolean isNumberInRow(int[][] board, int number,int row){
         for(int i=0;i<GRID_SIZE;i++){
             if(board[row][i]==number){
@@ -33,7 +33,7 @@ public class Sudokusolver {
     }
     private static boolean validplacement(int[][] board, int number,int row,int column){
         return  !isNumberInRow(board,number,row)&&
-                !isNumberInBox(board,number,row,column)&&
+                !isNumberInColumn(board,number,column)&&
                 !isNumberInBox(board,number,row,column);
      }
      public static boolean solveboard(int[][] board){
@@ -92,8 +92,7 @@ public class Sudokusolver {
         printBoard(board);
         if(solveboard(board)){
             System.out.println("Solved!!");
-        }
-        else{
+        } else{
             System.out.println("Unsolvable Board");
         }
        printBoard(board);
