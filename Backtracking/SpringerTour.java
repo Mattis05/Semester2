@@ -1,3 +1,4 @@
+/*
 package Backtracking;
 
 public class SpringerTour {
@@ -63,3 +64,4 @@ public class SpringerTour {
 		st.loese(0,7);
 	}
 }
+*/
