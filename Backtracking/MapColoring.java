@@ -16,7 +16,9 @@ public class MapColoring {
 		for(int x: graph[v]) {
 				if(x==1){
 				if(color[x]==c){
-					return false;//Ist die angrenzende Farbe die gleiche Farbe wo ich gerade versuche reinzumachen, returnt es false.
+					return false;
+					//Ist die angrenzende Farbe die gleiche Farbe wo ich gerade versuche reinzumachen,
+					// returnt es false.
 				}
 			}
 
@@ -30,7 +32,7 @@ public class MapColoring {
 		if(v== V){
 			return true; // wenn alle v knoten Gefärbt wurden, return true.
 		}
-		for(int i=1;i<=m+1;i++){
+		for(int i=1;i<m+1;i++){
 			if(isSafe(v,i)){
 				color[v]=i;
 

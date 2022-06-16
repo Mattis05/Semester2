@@ -1,4 +1,4 @@
-/*
+
 package Backtracking;
 
 public class SpringerTour {
@@ -52,10 +52,26 @@ public class SpringerTour {
 
 	// Eine rekursive Methode, um den Springer-Tour-Problem zu loesen
 	boolean loeseST(int x, int y, int anzahlSprung) {
-
-		// Zu vervollstaendigen
-
-	}
+        if(anzahlSprung==N*N){
+            return true;
+        }
+        for(int i = 0 ;i<8;i++){
+            int x2=x+X_MOVE[i];
+            int y2=y+Y_MOVE[i];
+            if(x2>=0 && x2<N && y2>=0 && y2<N){
+                if(tour[x2][y2]==-1){
+                    tour[x2][y2]=anzahlSprung;
+                    if(loeseST(x2,y2,anzahlSprung+1)){
+                        return true;
+                    }
+                    else{
+                        tour[x2][y2]=-1;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
 
 
@@ -64,4 +80,3 @@ public class SpringerTour {
 		st.loese(0,7);
 	}
 }
-*/

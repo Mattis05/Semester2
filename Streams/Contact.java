@@ -3,11 +3,8 @@ package Streams;
 
 
 
+import java.io.*;
 import java.util.Arrays;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Contact {
     String name;
@@ -41,18 +38,32 @@ public class Contact {
 
     public static void main(String[] args) {
         Contact friseur = new Contact("Friseur", new String[]{"0506"});
+        Gson g1 = new Gson();
+        String FriseurString = g1.toJson(friseur);
+        String[] Kontakte ={FriseurString};
 
-        System.out.println(friseur);
+
 
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("output.json"));
-            writer.write("ssda");
+            BufferedWriter writer = new BufferedWriter(new FileWriter("Friseur.json"));
+            for (String i:Kontakte){
+                writer.write("\n"+i);
+            }
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("nachbar.json"));
+            String line;
+            while((line= reader.readLine()) !=null)
+                System.out.println(line);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
