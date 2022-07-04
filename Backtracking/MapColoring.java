@@ -14,12 +14,12 @@ public class MapColoring {
 
 	boolean isSafe(int v, int c) {
 		for(int x: graph[v]) {
-				if(x==1){
+
 				if(color[x]==c){
 					return false;
 					//Ist die angrenzende Farbe die gleiche Farbe wo ich gerade versuche reinzumachen,
 					// returnt es false.
-				}
+
 			}
 
 		}

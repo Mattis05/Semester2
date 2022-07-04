@@ -6,7 +6,7 @@ public class Person {
 
     public Person(String name, int alter) {
             try{
-                if(alter>130 || alter<1){
+                if(alter>130 || alter<0){
                     throw new PersonExeption("Nummer nicht zwischen 0 und 130");
                 }
                 if(name ==null){
@@ -29,10 +29,13 @@ public class Person {
     public static void main(String[] args) {
         Person p1 = new Person("Max",500);
         System.out.println(p1);
+        /*
         Person p2 = new Person(null,20);
         System.out.println(p2);
         Person p3 = new Person("TEst",13);
         System.out.println(p3);
+
+         */
 
     }
 }

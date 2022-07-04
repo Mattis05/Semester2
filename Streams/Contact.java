@@ -38,8 +38,8 @@ public class Contact {
 
     public static void main(String[] args) {
         Contact friseur = new Contact("Friseur", new String[]{"0506"});
-        Gson g1 = new Gson();
-        String FriseurString = g1.toJson(friseur);
+
+        String FriseurString ="";
         String[] Kontakte ={FriseurString};
 
 
